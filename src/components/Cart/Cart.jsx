@@ -28,6 +28,7 @@ const Cart = (props) => {
             })
             .catch((err) => {
                 console.log('Error during uploading hotels data', err);
+                alert("Something went wrong! Try again")
             });
     };
 
@@ -35,6 +36,9 @@ const Cart = (props) => {
         axios.delete(`${apiURL}/${id}`).then((res) => {
             dispatch(removeHotelFromCart(id));
             getHotels(apiURL);
+        }).catch((err) => {
+            console.log('Error during deleting hotel', err);
+            alert("Something went wrong! Try again")
         });
     };
 
