@@ -1,0 +1,28 @@
+.skeletonWrapper{
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: 1000px) {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+.skeletonHotel{
+    display: flex;
+
+    @media only screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skeletonText{
+        margin-left: 1rem;
+        width: 100%;
+
+        @media only screen and (max-width: 1000px) {
+            margin: 0;
+        }
+    }
+}
+

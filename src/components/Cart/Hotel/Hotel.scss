@@ -1,0 +1,144 @@
+
+
+.hotelCard{
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    @media only screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .cardLeft{
+        display: flex;
+        border-right: 1px solid rgba(black, 0.1);
+
+        @media only screen and (max-width: 1000px) {
+            flex-direction: column;
+            align-items: center;
+            border: none;
+        }
+
+        .cardImage{
+            height: 200px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: -2px 2px 9px 0px rgba(26, 26, 26, 0.4);
+
+            @media only screen and (max-width: 1000px) {
+                max-height: 400px;
+                max-width: 600px;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        .cardDescPart{
+            margin: 0 1rem 0 1rem;
+
+            @media only screen and (max-width: 1000px) {
+                margin-top: 1rem;
+            }
+
+
+            .cardTitle{
+                    font-size: 1.8rem;
+                    margin: 0;
+            }
+
+            .cardDesc{
+                margin-top: 0.5rem;
+            }
+
+        }
+    }
+
+    .cardRight{
+        display: grid;
+        grid-template-columns: 90% 10%;
+        margin-right: 1rem;
+
+        @media only screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        .quantity{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+
+            .rangeOfDays{
+                margin-top: 10px;
+                -webkit-appearance: none;
+                width: 60%;
+                height: 25px;
+                background: #d3d3d3;
+                border-radius: 30px;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &::-webkit-slider-thumb{
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 30px;
+                    background: #53d5ae;
+                    cursor: pointer;
+                }
+
+                &::-moz-range-thumb {
+                    width: 25px;
+                    height: 25px;
+                    background: #4CAF50;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .priceColumn{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media only screen and (max-width: 1000px) {
+                flex-direction: row;
+                margin-top: 1rem;
+            }
+
+            .deleteButton{
+                border: none;
+                background: none;
+                outline: none;
+                cursor: pointer;
+
+                i{
+                    font-size: 1.7rem;
+                    background: none;
+
+                    &:hover{
+                        font-size: 2rem;
+                        background: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+ 
+}
