@@ -11,7 +11,7 @@ const App = () => {
     <div className="contentWrapper">
       {/* <header>Some header</header> */}
       <main>
-        <Route exact path={'/'}/>
+        <Route exact path={'/'} component={Cart}/>
         <Switch>
           <Route exact path={'/cart'} component={Cart}/>
           <Route exact path={'/payment'} component={Payment}/>
